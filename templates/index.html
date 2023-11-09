@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Grouping-Data</title>
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css"
+            rel="stylesheet">
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+            integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="/static/style.css">
+    </head>
+    <body>
+        <div class="wrapper">
+            <h1>Please insert your data inside the table or upload
+                your file</h1>
+            <div class="container">
+
+            </div>
+            <form id="userData">
+                <div class="row">
+                    <div class="col-md-12 btn-location">
+                        <br>
+                        <button class="btn btn-add float-end" id="add-row">
+                            <i class="fa-solid fa-plus"></i>
+                            &nbsp;&nbsp; Add Row</button>
+                        <p><b>Note: </b>ADDRESS FORMAT ** Street, city, Country
+                            **</p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <table class="table table-bordered" id="dataTable">
+                            <thead>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Address</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="form-file">
+                    <label>Upload your file in <highlight>csv
+                            format</highlight> here:</label>
+                    <input type="file" name="file" id="file" accept=".csv">
+                    <p class="message"></p>
+                </div>
+                <button type="button" id="submit-btn">SUBMIT</button>
+
+                <div class="content loader-out">
+                    <div class="load-wrapp">
+                        <div class="load-1">
+                            <div class="line"></div>
+                            <div class="line"></div>
+                            <div class="line"></div>
+                        </div>
+                    </div>
+                </div>
+
+            </form>
+
+        </div>
+
+        <script src="/static/script.js"></script>
+    </body>
+</html>
