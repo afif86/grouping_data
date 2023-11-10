@@ -51,6 +51,7 @@ What things you need to install the software and how to install them.
 ```
 Python 3.9 +
 Some kind of virtual environment like pipenv, venv , ... (Optional/ Recommended)
+Google Geocoding API 
 
 ```
 
@@ -62,7 +63,8 @@ Create a virtual environment then install the requirements, (following the comma
 ```
 pip install -r requirements.text
 ```
-
+change the env.sample to .env and add the google API key to it. 
+**Hint:** get the google API from here: https://developers.google.com/maps/documentation/geolocation/get-api-key
 
 
 ## 🔧 Running the tests <a name = "tests"></a>
