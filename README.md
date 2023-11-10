@@ -51,7 +51,7 @@ What things you need to install the software and how to install them.
 ```
 Python 3.9 +
 Some kind of virtual environment like pipenv, venv , ... (Optional/ Recommended)
-Google Geocoding API 
+Google Geolocation API
 
 ```
 
