@@ -144,13 +144,17 @@ border-color: var(--color-opacity);
 outline: var(--color-opacity);
 }
 
-tbody, td, tfoot, th, thead, tr {
+td, tfoot, th, thead, tr {
     border: 1px solid var(--secondary-color);
     padding: 10px;
 }
 
 thead {
     font-weight: 600;
+}
+
+thead th:last-child {
+   text-align: center !important;
 }
 
 .message {
@@ -233,3 +237,20 @@ thead {
       height: 15px;
     }
   }
+
+  tbody td{
+    text-align: center;
+  }
+.back-button {
+  color: var(--secondary-color);
+  font-size: 30px;
+}
+
+.back-button:hover {
+  color: var(--primary-color);
+  font-size: 30px;
+}
+
+.address-format {
+  font-weight: 400;
+}

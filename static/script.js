@@ -7,9 +7,24 @@ function addRow(e) {
   let row = table.insertRow(0);
   let cell1 = row.insertCell(0);
   let cell2 = row.insertCell(1);
+  let cell3 = row.insertCell(2);
   cell1.innerHTML = `<input type="text" class="name" name="name" placeholder="Name">`;
   cell2.innerHTML = `<input type="text" class="address" name="address" placeholder="Street, City, Country">`;
+  cell3.innerHTML = `<i class="fa-solid fa-trash-can"></i>`;
 }
+
+// Function to remove row from the table
+if (document.querySelector("#dataTable tbody")) {
+  document.querySelector("#dataTable tbody").addEventListener("click", (e) => {
+    e.preventDefault();
+    if (e.target.classList.contains("fa-trash-can")) e.target.parentElement.parentElement.remove();
+  });
+}
+
+// removeRow = (e) => {
+//   e.preventDefault();
+//   if (e.target.classList.contains("fa-trash-can")) row.deleteRow(e.parentElement.parentElement.rowIndex);
+// };
 
 // Function to upload and check the file type and size
 const selectedFile = document.getElementById("file");
@@ -32,6 +47,7 @@ const info = document.getElementById("submit-btn");
 info.addEventListener("click", (e) => {
   let finalInput = [];
 
+  // get data from table and return a json object
   document.querySelectorAll("#dataTable tbody tr").forEach((tr) => {
     let name = tr.querySelector("input.name").value;
     let address = tr.querySelector("input.address").value;
@@ -65,6 +81,6 @@ info.addEventListener("click", (e) => {
         document.body.innerHTML = html;
       });
   } else {
-    alert("Please insert a file or enter data in the table");
+    l;
   }
 });
